@@ -1,0 +1,20 @@
+15:22:56 **** Incremental Build of configuration Debug for project LCD_TASK1_WORD_SHIFTING ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_TASK1_WORD_SHIFTING.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7818 bytes (23.9% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:22:56 Build Finished (took 250ms)
+

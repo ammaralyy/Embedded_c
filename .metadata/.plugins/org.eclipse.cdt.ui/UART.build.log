@@ -1,0 +1,20 @@
+13:39:09 **** Incremental Build of configuration Debug for project UART ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1902 bytes (5.8% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:39:09 Build Finished (took 168ms)
+

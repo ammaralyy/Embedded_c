@@ -1,0 +1,20 @@
+15:22:17 **** Incremental Build of configuration Debug for project TIMER_EXTERNAL_INTRUPT ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 TIMER_EXTERNAL_INTRUPT.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1906 bytes (5.8% Full)
+(.text + .data + .bootloader)
+
+Data:          2 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:22:17 Build Finished (took 249ms)
+

@@ -1,0 +1,20 @@
+#include "std_types.h"
+#include "DIO_Reg.h"
+#include "utilities.h"
+#include "Dio_Int.h"
+
+#include <stdlib.h>
+
+#include "I2C_init.h"
+
+
+int main(int argc, char **argv) {
+
+	I2C_INIT_MASTER();
+
+	while (1) {
+
+
+	}
+}
+

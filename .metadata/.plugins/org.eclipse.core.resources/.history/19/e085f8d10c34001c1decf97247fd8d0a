@@ -1,0 +1,33 @@
+/*
+ * SPI_proj.c
+ *
+ *  Created on: Oct 22, 2021
+ *      Author: Ammar
+ */
+#include "std_types.h"
+#include "utilities.h"
+#include "DIO_Reg.h"
+#include "Dio_Int.h"
+
+#include "I2C_init.h"
+
+void I2C_INIT_MASTER(void){
+	set_bit(TWCR, 2); // enable I2C
+
+	TWBR =
+
+}
+
+void I2C_INIT_SLAVE(void);
+
+void I2C_Start(void);
+
+void I2C_Stop(void);
+
+void I2C_Send_ADDRESS_READ(void);
+
+void I2C_Send_ADDRESS_WRITE(void);
+
+void I2C_WriteByte(u8 data);
+
+u8 I2C_ReadByte(void);

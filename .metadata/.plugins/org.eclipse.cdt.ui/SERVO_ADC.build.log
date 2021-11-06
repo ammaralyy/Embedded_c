@@ -1,0 +1,20 @@
+16:58:08 **** Incremental Build of configuration Debug for project SERVO_ADC ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 SERVO_ADC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2350 bytes (7.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:58:09 Build Finished (took 1s.37ms)
+

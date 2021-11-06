@@ -1,0 +1,33 @@
+/*
+ * SPI_init.h
+ *
+ *  Created on: Oct 22, 2021
+ *      Author: Ammar
+ */
+
+#ifndef I2C_INIT_H_
+#define I2C_INIT_H_
+
+#include "std_types.h"
+#include "utilities.h"
+#include "DIO_Reg.h"
+#include "Dio_Int.h"
+
+#define SPCR *((volatile u8 *)0x2D)
+#define SPSR *((volatile u8 *)0x2E)
+#define SPDR *((volatile u8 *)0x2F)
+
+
+void I2C_INIT_MASTER(void);
+
+void I2C_INIT_SLAVE(void);
+
+void SEND_START_CONDITION(void);
+
+void SEND_ADDRESS(void);
+
+void SEND_DATA(u8 data);
+
+u8 RECIVE_DATA(void);
+
+#endif /* I2C_INIT_H_ */

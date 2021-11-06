@@ -1,0 +1,65 @@
+/*
+ * EEPROM_proj.c
+ *
+ *  Created on: Oct 29, 2021
+ *      Author: Ammar
+ */
+
+#include "Std_Types.h"
+#include "Utilites.h"
+#include "I2C_Int.h"
+#include "EEPROM_init.h"
+
+void EEPROM_Init(){
+	I2c_Init_Master();
+}
+
+void EEPROM_WRITE_DATA(u8 address, u8 data){
+	I2c_Start();
+
+	I2c_Send_slave_address_with_write_req(0xA0);
+
+	I2c_Write_byte(address);
+
+	I2c_Write_byte(data);
+
+	I2c_Stop();
+
+}
+
+u8 EEPROM_READ_DATA(u8 address){
+
+	I2c_Start();
+
+	I2c_Send_slave_address_with_write_req(0xA0);
+
+	I2c_Write_byte(address);
+
+//	I2c_Stop();
+//
+//	I2c_Start();
+
+	I2c_Repeated_start();
+
+	I2c_Send_slave_address_with_read_req(0xA1);
+
+	u8 data = I2c_Read_byte();
+
+	I2c_Stop();
+
+	return data;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

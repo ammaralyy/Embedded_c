@@ -1,0 +1,46 @@
+11:48:28 **** Incremental Build of configuration Debug for project LCD_TASKS ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:2:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../main.c:2:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:19: warning: pointer targets in passing argument 1 of 'LCD_WRITE_WORD' differ in signedness
+../main.c:29: warning: pointer targets in passing argument 1 of 'LCD_WRITE_WORD' differ in signedness
+Finished building: ../main.c
+ 
+Building target: LCD_TASKS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LCD_TASKS.map -mmcu=atmega32 -o "LCD_TASKS.elf"  ./Dio_Prog.o ./LCD_PROG.o ./main.o   
+Finished building target: LCD_TASKS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LCD_TASKS.elf  >"LCD_TASKS.lss"
+Finished building: LCD_TASKS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LCD_TASKS.elf  "LCD_TASKS.hex"
+Finished building: LCD_TASKS.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LCD_TASKS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7798 bytes (23.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:48:28 Build Finished (took 662ms)
+
